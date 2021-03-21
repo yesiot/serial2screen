@@ -1,5 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
+ARG DEBIAN_FRONTEND=noninteractive
 ARG OPENCV_VERSION=4.5.1
 
 RUN apt-get update \
@@ -8,7 +9,7 @@ RUN apt-get update \
     cmake \
     gcc \
     g++ \
-    libboost1.62-all \
+    libboost-all-dev \
     unzip \
     wget \
   && apt-get clean
